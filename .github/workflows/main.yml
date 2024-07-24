@@ -37,7 +37,13 @@ jobs:
     - name: brew upgrade
       run: brew upgrade
 
+    - name: install make
+      run: brew install make
+
+    - name: install x86_64-elf-gcc
+      run: brew install x86_64-elf-gcc
+
     - name: build
       run: make
-      
+
 
