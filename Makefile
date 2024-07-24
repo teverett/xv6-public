@@ -38,9 +38,9 @@ OBJS = \
 # detect build platform
 UNAME := $(shell uname)
 ifeq ($(UNAME),Darwin)
-include gcc-i386-darwin.mk
+include mk/gcc-i386-darwin.mk
 else
-include gcc-i386-linux.mk
+include mk/gcc-i386-linux.mk
 endif
 
 # If the makefile can't find QEMU, specify its path here
