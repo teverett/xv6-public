@@ -27,7 +27,7 @@ jobs:
           path: xv6.img
   
   build-osx:
-    runs-on: osx-latest
+    runs-on: macos-latest
     strategy:
       fail-fast: false
 
