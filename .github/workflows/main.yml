@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  build-ubuntu:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: ap:t-get update
+        run: sudo apt-get update
+  
+      - name: build
+        run: make
+
+  build-osx:
+    runs-on: osx-latest
+    strategy:
+      fail-fast: false
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: brew upgrade
+      run: sudo brew upgrade
+
+ #   - name: build
+ #     run: scons
+
