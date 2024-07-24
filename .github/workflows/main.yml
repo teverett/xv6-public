@@ -35,8 +35,9 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: brew upgrade
-      run: sudo brew upgrade
+      run: brew upgrade
 
- #   - name: build
- #     run: scons
+    - name: build
+      run: make
+      
 
