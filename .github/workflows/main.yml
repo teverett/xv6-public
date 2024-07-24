@@ -14,8 +14,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: ap:t-get update
+      - name: apt-get update
         run: sudo apt-get update
+
+      - name: build xv6.img
+        run: make xv6.img
+  
+      - name: build fs.img
+        run: make fs.img
 
       - name: upload xv6.img
         uses: actions/upload-artifact@v4
