@@ -16,15 +16,18 @@ jobs:
 
       - name: ap:t-get update
         run: sudo apt-get update
-  
-      - name: build
-        run: make
 
-      - name: upload
+      - name: upload xv6.img
         uses: actions/upload-artifact@v4
         with:
           name: xv6.img-linux
           path: xv6.img
+    
+      - name: upload fs.img
+        uses: actions/upload-artifact@v4
+        with:
+          name: fs.img-linux
+          path: fs.img
   
   build-osx:
     runs-on: macos-latest
@@ -43,12 +46,20 @@ jobs:
     - name: install x86_64-elf-gcc
       run: brew install x86_64-elf-gcc
 
-    - name: build
-      run: make
+    - name: build xv6.img
+      run: make xv6.img
 
-    - name: upload
+    - name: build fs.img
+      run: make fs.img
+
+    - name: upload xv6.img
       uses: actions/upload-artifact@v4
       with:
         name: xv6.img-osx
         path: xv6.img
   
+    - name: upload fs.img
+      uses: actions/upload-artifact@v4
+      with:
+        name: fs.img-osx
+        path: fs.img
