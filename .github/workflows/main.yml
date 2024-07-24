@@ -35,6 +35,12 @@ jobs:
           name: fs.img-linux
           path: fs.img
   
+      - name: upload kernel.sym
+        uses: actions/upload-artifact@v4
+        with:
+          name: kernel.sym-linux
+          path: kernel.sym
+
   build-osx:
     runs-on: macos-latest
     strategy:
@@ -69,3 +75,9 @@ jobs:
       with:
         name: fs.img-osx
         path: fs.img
+
+    - name: upload kernel.sym
+      uses: actions/upload-artifact@v4
+      with:
+        name: kernel.sym-osx
+        path: kernel.sym
