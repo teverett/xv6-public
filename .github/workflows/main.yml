@@ -20,6 +20,12 @@ jobs:
       - name: build
         run: make
 
+      - name: upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: xv6.img
+          path: xv6.img
+  
   build-osx:
     runs-on: osx-latest
     strategy:
