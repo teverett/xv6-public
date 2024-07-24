@@ -23,7 +23,7 @@ jobs:
       - name: upload
         uses: actions/upload-artifact@v4
         with:
-          name: xv6.img
+          name: xv6.img-linux
           path: xv6.img
   
   build-osx:
@@ -46,4 +46,9 @@ jobs:
     - name: build
       run: make
 
-
+    - name: upload
+      uses: actions/upload-artifact@v4
+      with:
+        name: xv6.img-osx
+        path: xv6.img
+  
