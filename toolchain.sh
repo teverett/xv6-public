@@ -1,19 +1,22 @@
 
-wget http://ftpmirror.gnu.org/binutils/binutils-2.37.tar.gz
-tar zxvf binutils-2.37.tar.gz
-cd binutils-2.37
-./configure --target=i386-jos-elf --disable-nls
-make
-make install
-cd ..
-wget http://ftpmirror.gnu.org/gcc/gcc-4.5.1/gcc-core-4.5.1.tar.bz2
-tar zxvf  gcc-core-4.5.1.tar.bz2
-cd gcc-4.5.1
+GCC=gcc-7.5.0
+BINUTILS=binutils-2.37
+
+#wget http://ftpmirror.gnu.org/binutils/$BINUTILS.tar.gz
+#tar zxvf $BINUTILS.tar.gz
+#cd $BINUTILS
+#./configure --target=i386-jos-elf --disable-nls
+#make
+#sudo make install
+#cd ..
+wget http://mirror.its.dal.ca/gnu/gcc/$GCC/$GCC.tar.gz
+tar zxvf $GCC.tar.gz
+cd $GCC 
 ./configure --target=i386-jos-elf --disable-nls --without-headers \
               --with-newlib --disable-threads --disable-shared \
-              --disable-libmudflap --disable-libssp
+              --disable-libmudflap --disable-libssp --enable-languages=c
 make
-make install
+#sudo make install
 cd ..
 #wget http://ftpmirror.gnu.org/gdb/gdb-6.8a.tar.gz
 #tar zxvf gdb-6.8a.tar.gz
