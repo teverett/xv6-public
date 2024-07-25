@@ -65,13 +65,13 @@ jobs:
       run: wget http://ftpmirror.gnu.org/binutils/binutils-2.21.1.tar.bz2
 
     - name: extract binutils
-      run: gunzip binutils-2.21.1.tar.bz2
+      run: bunzip2 binutils-2.21.1.tar.bz2
 
     - name: get gcc
       run: wget http://ftpmirror.gnu.org/gcc/gcc-4.5.1/gcc-core-4.5.1.tar.bz2
 
     - name: extract gcc
-      run: gunzip gcc-core-4.5.1.tar.bz2
+      run: bunzip2 gcc-core-4.5.1.tar.bz2
 
     - name: build xv6.img
       run: make xv6.img
