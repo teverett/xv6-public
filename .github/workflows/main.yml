@@ -61,11 +61,11 @@ jobs:
     - name: install make
       run: brew install make
 
-    - name: make toolchain
-      run: /bin/sh toolchain.sh
+    - name: install i686-elf-binutils
+      run: brew install i686-elf-binutils
 
-    - name: show toolchain
-      run: ls /usr/local/bin/i386*
+    - name: install  i686-elf-gcc
+      run: brew install i686-elf-gcc
 
     - name: build xv6.img
       run: make xv6.img
