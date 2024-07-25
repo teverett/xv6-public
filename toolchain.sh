@@ -1,7 +1,7 @@
 
-wget http://ftpmirror.gnu.org/binutils/binutils-2.21.1.tar.bz2
-tar zxvf binutils-2.21.1.tar.bz2
-cd binutils-2.21.1
+wget http://ftpmirror.gnu.org/binutils/binutils-2.37.tar.gz
+tar zxvf binutils-2.37.tar.gz
+cd binutils-2.37
 ./configure --target=i386-jos-elf --disable-nls
 make
 make install
@@ -21,4 +21,4 @@ cd ..
 # ./configure --target=i386-jos-elf --program-prefix=i386-jos-elf- \
 #              --disable-werror
 #make
-#make instsll
+#make install

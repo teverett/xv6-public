@@ -64,6 +64,9 @@ jobs:
     - name: make toolchain
       run: /bin/sh toolchain.sh
 
+    - name: show toolchain
+      run: ls /usr/local/bin/i386*
+
     - name: build xv6.img
       run: make xv6.img
 
