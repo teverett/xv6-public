@@ -18,5 +18,7 @@ cd ..
 wget http://ftpmirror.gnu.org/gdb/gdb-6.8a.tar.gz
 tar zxvf gdb-6.8a.tar.gz
 cd gdb-6.8
+ ./configure --target=i386-jos-elf --program-prefix=i386-jos-elf- \
+              --disable-werror
 make
 make instsll
