@@ -1,8 +1,8 @@
 
-CC=x86_64-elf-gcc
-LD=x86_64-elf-ld
-OBJCOPY=x86_64-elf-objcopy
-OBJDUMP=x86_64-elf-objdump
-AS=x86_64-elf-as
+CC=i386-elf-gcc
+LD=i386-elf-ld
+OBJCOPY=i386-elf-objcopy
+OBJDUMP=i386-elf-objdump
+AS=i386-elf-as
 QEMU=qemu-system-i386
-STRIP=x86_64-elf-strip
+STRIP=i386-elf-strip
