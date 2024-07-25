@@ -64,7 +64,7 @@ jobs:
     - name: install i686-elf-binutils
       run: brew install i686-elf-binutils
 
-    - name: install  i686-elf-gcc
+    - name: install i686-elf-gcc
       run: brew install i686-elf-gcc
 
     - name: build xv6.img
@@ -74,7 +74,7 @@ jobs:
       run: make fs.img
 
     - name: gcc version
-      run: x86_64-elf-gcc --version
+      run: i686-elf-gcc --version
 
     - name: show object files with sizes
       run: ls -la *.o
