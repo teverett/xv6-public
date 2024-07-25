@@ -14,3 +14,9 @@ cd gcc-4.5.1
               --disable-libmudflap --disable-libssp
 make
 make install
+cd ..
+wget http://ftpmirror.gnu.org/gdb/gdb-6.8a.tar.gz
+tar zxvf gdb-6.8a.tar.gz
+cd gdb-6.8
+make
+make instsll
