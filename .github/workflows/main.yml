@@ -71,7 +71,7 @@ jobs:
       run: make fs.img
 
     - name: gcc version
-      run: /usr/local/bin/x86_64-elf-gcc --version
+      run: x86_64-elf-gcc --version
 
     - name: show object files with sizes
       run: ls -la *.o
