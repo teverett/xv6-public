@@ -1,0 +1,16 @@
+
+wget http://ftpmirror.gnu.org/binutils/binutils-2.21.1.tar.bz2
+tar zxvf binutils-2.21.1.tar.bz2
+cd binutils-2.21.1
+./configure --target=i386-jos-elf --disable-nls
+make
+make install
+cd ..
+wget http://ftpmirror.gnu.org/gcc/gcc-4.5.1/gcc-core-4.5.1.tar.bz2
+tar zxvf  gcc-core-4.5.1.tar.bz2
+cd gcc-4.5.1
+./configure --target=i386-jos-elf --disable-nls --without-headers \
+              --with-newlib --disable-threads --disable-shared \
+              --disable-libmudflap --disable-libssp
+make
+make install
